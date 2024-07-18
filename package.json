@@ -1,0 +1,19 @@
+{
+  "name": "vite-assets-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --config vite.dev.config.ts",
+    "build:a": "tsc && vite build --config vite.prod-a.config.ts",
+    "build:b": "tsc && vite build --config vite.prod-b.config.ts",
+    "build": "rimraf dist && pnpm build:a && pnpm build:b",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4"
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+}
